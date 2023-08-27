@@ -30,7 +30,12 @@ public class GreetingController {
   public Greeting greeting2(Message message) throws Exception {
     Thread.sleep(500); // simulated delay
       System.out.println("Hello @!!!!!");
-    return new Greeting( "! \n \nMessage: " + HtmlUtils.htmlEscape(message.getMess()) );
+
+      `<div class="form-group">
+                    <label for="name">What is your name?</label>
+                    <input type="text" id="name" class="form-control" placeholder="Your name here...">
+                </div>`
+    return new Greeting( "! \n" + HtmlUtils.htmlEscape(message.getMess()) );
   }
 
 }
